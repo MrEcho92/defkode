@@ -1,0 +1,17 @@
+<!--portfolio.html-->
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Blog {%endblock%}
+{%block meta_description%} defkode.com welcomes you. check out our page {% endblock%}
+{% block main %}
+
+  <div class="container text-center blogdetail-1">
+    <h5 class="blogdetail-2">{{blog.published_date}}</h5>
+    <h2 class="blogdetail-3">{{blog.title}}</h2>
+    <img src="{{ blog.image_upload.url }}" alt="Image Not Found" class='img-fluid rounded'>
+    <div class="container p-1 blogdetail-4">
+    <p>{{ blog.message|safe|linebreaks}}</p>
+    </div>
+  </div>
+
+{% endblock %}

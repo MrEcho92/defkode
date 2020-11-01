@@ -1,0 +1,92 @@
+<!--index.html-->
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Home {%endblock%}
+{%block meta_description%} defkode.com welcomes you. check out our page {% endblock%}
+{% block main %}
+
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 intro">
+          <h2 class="intro-1">Unleash your creativity with defkode</h2>
+          <h3 class="intro-2">We build awesome, beautiful and simple websites. </h3>
+          <a class="intro-button-1" href="{% url 'mysite:portfolio'%}">What we do</a>
+          <a class="intro-button-2" href="{% url 'mysite:contact'%}">Get started</a>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <img src="" class="img-responsive" alt="">
+        </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="container-fluid p-5 index-service">
+    <div class="container">
+      <div class="grid-3">
+        <div><img src="{% static 'image/girlcode.png'%}" class="img-responsive" alt=""><a href="https://www.freepik.com/free-photos-vectors/technology"></a></div>
+        <div class="index-word">
+          <h3>Simplicity</h3>
+          <p>Every step is clearly defined by us and frequent communicate in order to achieve your goals.</p>
+          <h3>Creativity</h3>
+          <p>We listen to your needs and will collaboratively work together to create and craft best possible results for your project.</p>
+          <h3>Strive for greatness</h3>
+          <p>We are not immune to failures. However, we are focused and will strive to deliver best results.</p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container text-center intro-3">
+    <div class="container">
+      <h3> We listen to your needs and will act accordingly to ensure we deliver to highest standard.</h3>
+    </div>
+  </div>
+
+<div class="jumbotron jumbotron-fluid p-5">
+  <div class="container-fluid text-center intro-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <p>Are you a <span id="loop-1">Small Business</span>?</p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <p>Do you want to build <span id="loop-2">E-commerce website</span>?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container p-5 text-center">
+    <h2>We can help you achieve your goals.</h2>
+    <br>
+    <a class="intro-button-3" role="button" href="{% url 'mysite:portfolio'%}">Learn more</a>
+  </div>
+</div>
+
+  <div class="container p-5 text-center newsletter">
+    <h2>Sign up to our newsletter</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 text-center newsletter-form">
+          <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input id="email" type="text" name="email"  class='form-control' placeholder="Your email address" required>
+            <p>No spam and your information will be used inline with our <span><a href="{% url 'mysite:privacy'%}">privacy policy</a></span>.</p>
+            <input type="submit" name="submit" class="newsletter-button"  value="Subscribe">
+          </form>
+        </div>
+      <div class="col-md-4"></div>
+      </div>
+    </div>
+  </div>
+  <img class="bubble-1" src="{% static 'image/mid-eclipse.svg'%}" alt="">
+  <img class="bubble-2" src="{% static 'image/mid-eclipse.svg'%}" alt="">
+  <img class="bubble-3" src="{% static 'image/mid-eclipse.svg'%}" alt="">
+
+<!-- Image from <a href="https://www.freepik.com/free-photos-vectors/technology">Technology vector created by freepik - www.freepik.com</a> -->
+{% endblock %}

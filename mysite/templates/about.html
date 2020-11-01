@@ -1,0 +1,41 @@
+<!--about.html-->
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About defkode {%endblock%}
+{%block meta_description%} Want to know more about defkode and how we plan to take over coding world. Our focus is in Africa - Nigeria, Ghana and others. {% endblock%}
+{% block main %}
+
+  <div id="about-1" class="container p-5 text-center">
+    <h2>Learn more about defkode and our goals</h2>
+  </div>
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="row about-2">
+        <div class="col-md-6 col-sm-12">
+          <h2 class="text-center">About defkode</h2>
+          <p>My name is Manni. I am an engineer and I love learning new things in order to figure out ways to incorporate them in my daily life.
+            I got into coding late 2018 after watching a Youtube video on Python programming. Ever since, I try to learn and improve my programming abilities via self learning and building prototypes.
+            <br><br>
+            Fast forward to today, I am a full stack web developer. I know Python, Django, Bootstrap, JavaScript and HTML/CSS.
+            <br><br>
+            I created defkode to help startups, small & medium sized businesses and individuals bring their projects to life.
+          </p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <h2 class="text-center">Our Goals</h2>
+          <p>Our goal is to build awesome projects and assist you in bringing your project to life. For example setting up your e-commerce or porfolio website.
+          <br><br>We know every project is different and will do our best to tailor your experience.
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container p-5 text-center">
+    <h2><strong>Are you interested in discussing a project?</strong></h2>
+    <h4>Let's build something awesome together.</h4>
+    <br>
+    <a class="about-button-1" role="button" href="{% url 'mysite:contact'%}">Get in touch</a>
+  </div>
+{% endblock %}

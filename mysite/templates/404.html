@@ -1,0 +1,14 @@
+<!--404.html-->
+{% extends "base.html" %}
+{% load static %}
+{% block title %} 404page {%endblock%}
+{% block meta_description %} defkode.com 404page {% endblock %}
+{% block main %}
+
+  <div class="container text-center">
+    <h1>Page Not Found</h1>
+    <h2>The page you are looking for does not exist. Please go back to our home page by clicking link.</h2>
+    <a class="btn btn-primary" role="button" href="{% url 'mysite:home'%}">Go to home page</a>
+  </div>
+
+{% endblock %}

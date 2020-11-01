@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta content="{%block meta_description%} welcome to defkode {% endblock%}" name="description">
+    <title>{% block title %} defkode {% endblock %}</title>
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- defkode css -->
+    <link rel="stylesheet" href="{% static 'mysite/css/style.css'%}">
+
+    <link href="{% static 'image/defkode_logo.png'%}" rel="icon">
+
+    <!-- Alternative to Bootstrap 3 Glyphicons -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+  <body>
+
+  <!-- nav start -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-white border-bottom scrolling-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}">
+          <h3>defkode</h3></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExample07">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'mysite:about' %}">About</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'mysite:portfolio'%}">Services & Porfolio</a>
+            </li>
+            <li class="nav-item active dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Talks</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown07">
+                <a class="dropdown-item" href="{% url 'mysite:bloglist'%}">Blog</a>
+                <a class="dropdown-item" href="{% url 'mysite:blockchain'%}">Let's talk about Blockchain Technology</a>
+              </div>
+            </li>
+            </ul>
+            <ul class="nav justify-content-end">
+              <div class="row">
+                <li class="nav-item inline">
+                  <a class="button navbutton" href="{% url 'mysite:contact'%}">Contact us</a>
+                </li>
+              </div>
+            </ul>
+        </div>
+      </div>
+    </nav>
+  <!-- nav end -->
+
+<!--main page content -->
+    {% block main %}
+    {% endblock %}
+<!--footer start-->
+<footer class="pt-4 my-md-5 pt-md-5 border-top">
+  <div class="container">
+   <div id="footer" class="row">
+     <div class="col-12 col-md">
+       <h3>About defkode</h3>
+       <p>We build awesome, beautiful and simple web development projects.</p>
+     </div>
+     <div class="col-6 col-md">
+       <h5>Useful links</h5>
+       <ul class="list-unstyled text-small">
+         <li><a class="text-muted" href="{% url 'mysite:blockchain'%}">Cool stuff</a></li>
+         <li><a class="text-muted" href="{% url 'mysite:bloglist'%}">Blog</a></li>
+       </ul>
+     </div>
+     <div class="col-6 col-md">
+       <h5>Get in touch</h5>
+       <ul class="list-unstyled text-small">
+         <li><a class="text-muted" href="{% url 'mysite:contact'%}">Contact us</a></li>
+         <li><a class="text-muted" href="https://twitter.com/MrEcho92">Twitter</a></li>
+       </ul>
+     </div>
+     <div class="col-6 col-md">
+       <h5>Legal</h5>
+       <ul class="list-unstyled text-small">
+         <li><a class="text-muted" href="{% url 'mysite:privacy'%}">Privacy</a></li>
+         <li><a class="text-muted" href="{% url 'mysite:terms'%}">Terms of Use</a></li>
+       </ul>
+     </div>
+   </div>
+  </div>
+  <br>
+  <div class="container copyright">
+    <p>Copyright © defkode.com - All Rights Reserved</p>
+  </div>
+ </footer>
+  <!-- Footer end-->
+
+  <!-- myjs -->
+  <script src="{% static 'mysite/js/main.js'%}"></script>
+
+<!-- looping: services we offer  -->
+  <script>
+    var example = ['Medium sized business', 'Blogger','Artist', 'Startup'];
+
+    textSequence1(0);
+    function textSequence1(i) {
+        if (example.length > i) {
+            setTimeout(function() {
+                document.getElementById("loop-1").innerHTML = example[i];
+                textSequence1(++i);
+            }, 5000); // 5 second (in milliseconds)
+
+        } else if (example.length == i) { // Loop
+            textSequence1(0);
+        }
+    }
+
+      var ex = ['Online Presence', 'Portfolio website', 'Backend Development', 'Blogging website'];
+
+      textSequence(0);
+      function textSequence(i) {
+
+          if (ex.length > i) {
+              setTimeout(function() {
+                  document.getElementById("loop-2").innerHTML = ex[i];
+                  textSequence(++i);
+              }, 5000); // 5 second (in milliseconds)
+
+          } else if (ex.length == i) { // Loop
+              textSequence(0);
+          }
+      }
+  </script>
+
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

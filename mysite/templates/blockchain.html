@@ -1,0 +1,100 @@
+<!--blockchain.html-->
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Blockchain {%endblock%}
+{%block meta_description%} defkode - everything about blockchain technology and our plans to help developing countries using this technology{% endblock%}
+{% block main %}
+
+  <div class="container text-center blockchain-1">
+    <h2>Blockchain Technology</h2>
+  </div>
+
+  <div class="container">
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <p>What is Blockchain technology? <img src="https://img.icons8.com/material/20/000000/double-down--v1.png"/></p>
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Blockchain is chain of blocks in literal sense. It is referred as a <i>distributed ledger</i>. A growing record of transactions (known as blocks) which are linked chronologically and secured using cryptograph.
+            It is decentralised and immutable. A block is a piece of data (or transaction) stored within the blockchain. To access a record in blockchain, you must be in blockchain network.</p>
+            <p>Examples of blockchain technology in finance sector are Bitcoin, Ethereum, Litecoin and others. This techology is not limited to only financial sector but to any industries valuing <strong>trust</strong>.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <p>Applications of Blockchain<img src="https://img.icons8.com/material/20/000000/double-down--v1.png"/></p>
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>Almost any industry who shares data among multiples parties, requires verification, are time sensitive and requires transactions by different users will require a blockchain solution.
+            Practical applications of blockchain being explored today are listed below. </p>
+            <p><strong>Bank use</strong>- integrating blockchain into bank will see transcations processed in minutes and securely.</p>
+            <p><strong>Healthcare</strong>- making it easier to access patients' medical records. They can be encoded and stored on the blockchain with a private key to ensure privacy.</p>
+            <p><strong>Cryptocurrency</strong>- you would have heard about this on the news examples of popular cryptocurrencies are Bitcoin, Ethereum coin, Ripple. They are digital currencies. </p>
+            <p><strong>Real estate</strong>- access of property records and deeds can be done easily and quicker using blockchain. </p>
+            <p><strong>Voting</strong>- elimination of election fraud.</p>
+            <p><strong>Charities</strong>- Ensuring your gifts are being used properly by charity organisations.</p>
+            <p><strong>Supply chain</strong>- tracing source of materials or products and full visibility of supply chain.</p>
+            <p><strong>And others</strong>- opportunities are endless. If you can think of any other applications of blockchain, feel free to share with us. </p>
+            <br>
+            <p><u>Advantages of Blockchain</u> are transparency,  secure transactions, decentralisation and accurancy of the chain. </p>
+            <p><u>Disadvantages of Blockchain</u> are techology cost, illegal activities, speed inefficiency and hack susceptibility.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <p>How can blockchain technology be used to improve developing countries?<img src="https://img.icons8.com/material/20/000000/double-down--v1.png"/> </p>
+            </button>
+          </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>We have higlighted below areas that blockchain can open up new market opportunities for developing countries. They are:</p>
+            <div class="container">
+              <ul>
+                <li><p><strong>Supply chain tracking</strong>- tracking goods at every stage in supply chain.</p></li>
+                <li><p><strong>Records</strong>- clear and reliable records of ownership in property, education and health sector.</p></li>
+                <li><p><strong>Smart contract</strong>- makes it easier to transact business without fear. They are self-executing computer programs that are event triggered. </p></li>
+                <li><p><strong>Cross-border payments & currency</strong>- fast and secured means to store and transfer of value</p></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingFour">
+          <h2 class="mb-0">
+            <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              <p>Blockchain, developing countries & defkode <img src="https://img.icons8.com/material/20/000000/double-down--v1.png"/></p>
+            </button>
+          </h2>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+          <div class="card-body">
+            <p>defkode's goal is to understand blockchain techology, collaborate with startups and create solutions to help developing countries with adopting this technology.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+References
+https://www.investopedia.com/terms/b/blockchain.asp#blockchains-practical-application
+https://www.pwc.com/gx/en/insurance/assets/blockchain-a-catalyst.pdf

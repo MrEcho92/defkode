@@ -1,0 +1,119 @@
+<!--portfolio.html-->
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Services & Portfolio {%endblock%}
+{%block meta_description%} defkode - what we do and our portfolio {% endblock%}
+{% block main %}
+  <div id="service-1" class="container p-5 text-center">
+    <h2>We build modern website with flexible components.</h2>
+    <h4>Simple & mobile-friendly website designs </h4>
+  </div>
+
+<div id="service-2" class="jumbotron jumbotron-fluid p-5">
+  <div class="container">
+      <div class="grid-1">
+        <div>
+          <img src="{% static 'image/webdev.png'%}" alt="No picture">
+          <h3>Web development</h3>
+          <p>We will produce beautiful and effective websites to suit your requirement.
+            From building backend development using Django to creating your frontend using Bootstrap, we will work together to achieve your goals.
+          </p>
+        </div>
+        <div>
+          <img src="{% static 'image/create.png'%}" alt="No picture">
+          <h3>Creative web designs using Bootstrap</h3>
+          <p>Bootstrap is most popular frontend frame works with amazing features. We will incorporate these features to build your projects. </p>
+        </div>
+        <div>
+          <img src="{% static 'image/web.png'%}" alt="No picture">
+          <h3>Build websites and integration</h3>
+          <p>If you want, we can tweak choosen templates to achieve your goals. We can build backend and integrate choosen web template to suit your needs. </p>
+        </div>
+      </div>
+  </div>
+    <div class="container">
+      <div class="grid-2">
+        <div class="grid-2-img"><img src="{% static 'image/innovation.jpg'%}" class="img-responsive" alt=""><a href="https://www.freepik.com/free-photos-vectors/banner"></a></div>
+        <div class="text-center">
+          <h2>Provide tailored experience for your project</h2>
+          <p class="text-center">If you are looking to build e-commerce store, blogging website, create art portfolio and build your online presence, we will assist you in achieving your goals.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container-fluid service-3">
+  <div class="container text-center">
+    <h2>Our Technologies</h2>
+      <p class="text-center">Here are the list of tools we use to bring your ideas to life.</p>
+      <div class="icon-container">
+        <div class="python-icon">
+          <img src="https://img.icons8.com/color/150/000000/python.png"/>
+          <h4>Python</h4>
+        </div>
+        <div class="django-icon">
+          <img src="https://img.icons8.com/color/150/000000/django.png" alt="Django photo"/>
+          <h4>Django</h4>
+        </div>
+        <div class="Bootstrap-icon">
+          <img src="https://img.icons8.com/color/150/000000/bootstrap.png"/>
+          <h4>Bootstrap</h4>
+        </div>
+        <div class="java-icon">
+          <img src="https://img.icons8.com/color/150/000000/javascript.png"/>
+          <h4>JavaScript</h4>
+        </div>
+        <div class="atom-icon">
+          <img src="{% static 'image/atom.png'%}" alt="Atom editor"/>
+          <h4>Atom</h4>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="container-fluid service-4">
+  <div class="container text-center">
+  <h2>Our active and recent projects</h2>
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'image/slides_01.jpg'%}" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Eugene Auto website</h5>
+          <p class="text-center">We are building backend and integrating frontend website. </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'image/slides_02.jpg'%}" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Future projects</h5>
+          <p class="text-center">No description </p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    </div>
+  </div>
+</div>
+
+<div id="service-5"class="container p-5 text-center">
+  <h2><strong>Are you interested in discussing a project?</strong></h2>
+  <h4>Let's build something awesome together.</h4>
+  <br>
+  <a class="service-button" role="button" href="{% url 'mysite:contact'%}">Get in touch</a>
+</div>
+{% endblock %}
+
+<!--<a href="https://www.freepik.com/free-photos-vectors/banner">Banner vector created by katemangostar - www.freepik.com</a>-->
+<!--Icons from hiclippart.com & icons8.com-->

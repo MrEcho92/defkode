@@ -1,0 +1,59 @@
+<!--bloglist.html-->
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Blog {%endblock%}
+{%block meta_description%} defkode latest news and trends - keeping up with the coders.. {% endblock%}
+{% block main %}
+<div class="container p-5 text-center blog-1">
+  <h2>Our Blog </h2>
+  <p>Discover our blog insights, news, trends and stories from coding world. </p>
+</div>
+
+<div id="service-2" class="jumbotron jumbotron-fluid p-5">
+  <div class="container">
+    <div class="bloglist">
+    {% for blog in blog_list %}
+      {% if blog.status %}
+      <div class="card-deck">
+        <div class="card">
+          <img src="{{ blog.image_upload.url }}" class="card-img" alt="Not found.." >
+          <div class="card-body">
+              <h5 class="card-title">{{ blog.title }}</h5>
+              <p class="card-text">{{blog.message|slice:":60" }}</p>
+              <a href="{% url 'mysite:blogdetail' blog.slug  %}" class="blog-button">Read More &rarr;</a>
+              <p class="card-text"><small class="text-muted">Last updated: {{ blog.published_date|timesince }}</small></p>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% empty %}
+        <p class="text-center"> No post uploaded. </p>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<br>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item disabled">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo; First</a>
+                <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            </span>
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">Next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
+            {% endif %}
+        </span>
+      </li>
+    </ul>
+  </nav>
+
+{% endblock %}

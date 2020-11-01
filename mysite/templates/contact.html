@@ -1,0 +1,46 @@
+<!--contact.html-->
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Contact {%endblock%}
+{%block meta_description%} defkode contact us below {% endblock%}
+{% block main %}
+<div class="container text-center contact-1">
+  <h1>Have a project in mind?</h1>
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container text-center emailsent">
+    {% if name %}
+    <h3>Hi {{ name }}, Your message has been sent and
+      we will get back to you as soon as possible. Thank you!</h3>
+    {% endif %}
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4 text-center contact-2">
+        <form class="form-signin" method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+        <h2>General Enquires</h2>
+        <p>We'd love to talk about how we can help you.</p>
+        <input type="text" name="name" id="inputEmail" class="form-control" placeholder="Your name" required autofocus>
+        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Your email address" required autofocus>
+        <label for="textarea" class="sr-only" >Message</label>
+        <textarea class="form-control" name="message" id="contact-message" placeholder="Hi there, I would like to ..." rows="5" data-rule="required" data-msg="Please write something for us"></textarea>
+        <br>
+        <button class="contact-button" type="submit">Send message</button>
+      </form>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+    <div class="container text-center contact-3">
+      <h2>Alternatively</h2>
+      <p>You can send direct email to us</p>
+      <a href="mailto:skilledopp@gmail.com"><img src="https://img.icons8.com/ultraviolet/80/000000/email-open.png"/></a>
+      <p> We'll get back to you in 1-2 business days.</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
