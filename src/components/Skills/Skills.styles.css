@@ -35,6 +35,11 @@
   .skills-item > h2,p{
     font-size:small;
   }
+  .skills-items {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .title {

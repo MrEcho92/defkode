@@ -11,8 +11,8 @@
 }
 @media screen and (max-width:414px) {
   .project-card {
-      margin: 0 2rem;
-      width: fit-content;
+      margin: 0 5rem;
+      width: 70%;
   }
 }
 .project-card:hover {

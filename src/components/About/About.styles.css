@@ -5,16 +5,22 @@
   height: 70vh;
 }
 
-@media screen and (max-width:700px) {
+
+@media screen and (max-width:1024px) {
   .about{
     grid-template-columns: 1fr;
     height: fit-content;
   }
 }
-@media screen and (max-width:1024px) {
-  .about{
-    grid-template-columns: 1fr;
-    height: fit-content;
+@media screen and (max-width:414px) {
+  .about-me{
+    height: auto;
+  }
+  .about-me .about-me-big-heading{
+    font-size: 2rem !important;
+  }
+  .about-me > p {
+    font-size: 0.8rem !important;
   }
 }
 

@@ -28,3 +28,12 @@
     color: #0077cc;
     text-decoration: none;
 }
+
+@media screen and (max-width:414px) {
+    .nav-bar-logo{
+        font-size: 2rem;
+    }
+    .nav-bar .header-item{
+        font-size: 1.1rem;
+    }
+}
