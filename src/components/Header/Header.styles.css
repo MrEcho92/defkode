@@ -1,0 +1,22 @@
+.header{
+   width: auto;
+}
+@media screen and (max-width:414px) {
+    .header{
+        display: none;
+    }
+}
+.header .header-list:last-child{
+    color:  #0077cc;
+}
+
+.header-list{
+    margin: 0 1.2rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+}
+.header-list:hover{
+    text-decoration: none;
+    color: #0077cc;
+}

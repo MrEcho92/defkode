@@ -1,0 +1,17 @@
+.App {
+    display: grid;
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto  1fr auto;
+    grid-template-areas: 
+        'h h h h h h h h h h h h '
+        'c c c c c c c c c c c c '
+        'f f f f f f f f f f f f '
+    ;
+}
+
+a{
+    text-decoration: none;
+}

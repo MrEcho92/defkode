@@ -1,0 +1,44 @@
+.contact{
+    color: white;
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 50vh;
+}
+
+.contact-content{
+    max-width: 600px;
+    width: 100%;
+}
+
+
+.contact-content > p{
+    line-height: 1.8;
+    letter-spacing: 0.02rem;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width:615px){
+    .contact-content > p{
+        padding: 0 2rem;
+    }
+}
+
+.submit-btn{
+    border-bottom: 2px solid  #fff;
+    border-right: 2px solid  #fff;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    color: white;
+    background-color: #0077cc;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    width: max-content;
+}
+.submit-btn:hover{
+    background-color: #1a1a1a;
+    color: white;
+    transition: 0.3s ease-in;
+}

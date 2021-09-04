@@ -1,0 +1,18 @@
+.footer {
+    grid-area: f;
+    color: white;
+    text-align: center;
+}
+
+.footer-social{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    color: white;
+}
+
+.footer-social:hover{
+    cursor: pointer;
+    color: #0077cc;
+    transition: all .5s ease;
+}
